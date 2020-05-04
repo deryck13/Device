@@ -5,13 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "Device",
-    platforms: [.iOS(.v8)],
+    platforms: [.iOS(.v8),
+                .macOS(.v10_10)],
     products: [
         .library( name: "Device", targets: ["Device"])
     ],
     targets: [
         .target(
             name: "Device",
-            dependencies: [])
-    ]
+            path: "Source")
+    ],
+    swiftLanguageVersions: [.v5]
 )
